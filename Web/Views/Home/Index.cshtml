@@ -1,4 +1,4 @@
-﻿@model List<Entities.Stock>
+﻿@model List<Entities.Inventory>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -19,9 +19,8 @@
         {
             <tr>
                 <td>@item.Id</td>
-                <td>@item.InventoryId</td>
+                <td>@item.InventoryName</td>
                 <td>@item.Quantity</td>
-                <td>@item.Price</td>
                 <td><a href="#" class="btn btn-warning btn-sm">Detaylar</a><a href="#" class="btn btn-danger btn-sm">Sil</a></td>
             </tr>
         }

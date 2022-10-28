@@ -4,7 +4,7 @@
 
 namespace DataAccess.Migrations
 {
-    public partial class init : Migration
+    public partial class _291020220206 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,8 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    InventoryName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    InventoryName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

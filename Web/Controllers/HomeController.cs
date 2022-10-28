@@ -10,8 +10,7 @@ namespace Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        private InventoryManager _inventoryManager=new InventoryManager(new EfInventoryDal());
-        StockManager _stockManager=new StockManager(new EfStockDal());
+        private InventoryManager _inventoryManager=new InventoryManager(new EfInventoryDal());        
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -20,7 +19,7 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            var stcok = _stockManager.GetList();
+            var stcok = _inventoryManager.GetList();
             return View(stcok);
         }
 

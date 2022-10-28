@@ -12,7 +12,6 @@ namespace Desktop
         }
 
         InventoryManager inventoryManager=new InventoryManager(new EfInventoryDal());
-        StockManager stockManager=new StockManager(new EfStockDal());
 
         private void Form1_Load(object sender, EventArgs e)
         {

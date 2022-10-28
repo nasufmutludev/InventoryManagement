@@ -11,9 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{88266F45-BF26-45F8-BA91-D0164F1EAD1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{25179AE8-7B0B-44C4-847C-1E91DF26F656}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop", "Desktop\Desktop.csproj", "{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desktop", "Desktop\Desktop.csproj", "{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		{88266F45-BF26-45F8-BA91-D0164F1EAD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88266F45-BF26-45F8-BA91-D0164F1EAD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88266F45-BF26-45F8-BA91-D0164F1EAD1F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25179AE8-7B0B-44C4-847C-1E91DF26F656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25179AE8-7B0B-44C4-847C-1E91DF26F656}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25179AE8-7B0B-44C4-847C-1E91DF26F656}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25179AE8-7B0B-44C4-847C-1E91DF26F656}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}.Release|Any CPU.ActiveCfg = Release|Any CPU

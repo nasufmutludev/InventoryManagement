@@ -10,6 +10,5 @@ namespace DataAccess.Concrete
             optionsBuilder.UseSqlServer("Server=DESKTOP-HBR8UE0;Database=InventoryDb;Integrated Security=true");
         }
         public DbSet<Inventory> Inventories { get; set; }
-        public DbSet<Stock> Stocks { get; set; }
     }
 }
