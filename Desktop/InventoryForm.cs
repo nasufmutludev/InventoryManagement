@@ -27,7 +27,8 @@ namespace Desktop
         {
             var inventoryAdd = new Inventory()
             {
-                InventoryName = txtEnvanterAdi.Text
+                InventoryName = txtEnvanterAdi.Text,
+                Quantity=int.Parse(txtAdet.Text)
             };
             inventoryManager.Add(inventoryAdd);
             LoadInventory();
