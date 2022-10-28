@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desktop", "Desktop\Desktop.csproj", "{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{612CA7C0-AF03-4AAC-82F6-BC3A6A4CCADF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD20E281-0A45-445B-B5BB-DC7005F2ABE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612CA7C0-AF03-4AAC-82F6-BC3A6A4CCADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612CA7C0-AF03-4AAC-82F6-BC3A6A4CCADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612CA7C0-AF03-4AAC-82F6-BC3A6A4CCADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612CA7C0-AF03-4AAC-82F6-BC3A6A4CCADF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
