@@ -12,5 +12,8 @@ namespace Entities
         public int Id { get; set; }
         public string InventoryName { get; set; }
         public int Quantity { get; set; }
+        public int CompanyId { get; set; }
+        public DateTime DateOfEntry { get; set; }
+        public DateTime ReleaseDate { get; set; }
     }
 }
