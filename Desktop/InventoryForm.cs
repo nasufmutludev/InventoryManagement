@@ -14,7 +14,7 @@ namespace Desktop
         InventoryManager _inventoryManager=new InventoryManager(new EfInventoryDal());
         private CompanyManager _companyManager = new CompanyManager(new EfCompanyDal());
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void InventoryForm_Load(object sender, EventArgs e)
         {
             LoadInventory();
             CompanyLoad();
