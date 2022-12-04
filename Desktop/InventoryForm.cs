@@ -24,7 +24,7 @@ namespace Desktop
             var tarih = DateTime.Now.Date.Day.ToString();
             var tarih2 = DateTime.Now.Year.ToString();
             var tarih3 = DateTime.Now.Second.ToString();
-            txtInventoryName.Text = "000000" + tarih + tarih2 + tarih3 + sayi;
+            txtInventoryName.Text = "0000" + tarih + tarih2 + tarih3 + sayi;
         }
 
         private void CmbCompanyLoad()
