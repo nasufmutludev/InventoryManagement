@@ -40,24 +40,34 @@
             this.lblAdet = new System.Windows.Forms.Label();
             this.btnInvantoryAdd = new System.Windows.Forms.Button();
             this.txtInventoryName = new System.Windows.Forms.TextBox();
-            this.lblEnvanterAdi = new System.Windows.Forms.Label();
+            this.lblEnvanterNo = new System.Windows.Forms.Label();
             this.dgwInventoryList = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnCompanyAdd = new System.Windows.Forms.Button();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.lblFirmaAdi = new System.Windows.Forms.Label();
             this.dgwCompanyList = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtInventorySaleText = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSale = new System.Windows.Forms.Button();
+            this.txtQuantitySaleText = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgwSaleList = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwInventoryList)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCompanyList)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSaleList)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -77,7 +87,7 @@
             this.tabPage1.Controls.Add(this.lblAdet);
             this.tabPage1.Controls.Add(this.btnInvantoryAdd);
             this.tabPage1.Controls.Add(this.txtInventoryName);
-            this.tabPage1.Controls.Add(this.lblEnvanterAdi);
+            this.tabPage1.Controls.Add(this.lblEnvanterNo);
             this.tabPage1.Controls.Add(this.dgwInventoryList);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -172,14 +182,14 @@
             this.txtInventoryName.Size = new System.Drawing.Size(100, 23);
             this.txtInventoryName.TabIndex = 2;
             // 
-            // lblEnvanterAdi
+            // lblEnvanterNo
             // 
-            this.lblEnvanterAdi.AutoSize = true;
-            this.lblEnvanterAdi.Location = new System.Drawing.Point(6, 9);
-            this.lblEnvanterAdi.Name = "lblEnvanterAdi";
-            this.lblEnvanterAdi.Size = new System.Drawing.Size(80, 15);
-            this.lblEnvanterAdi.TabIndex = 1;
-            this.lblEnvanterAdi.Text = "Envanter Adı :";
+            this.lblEnvanterNo.AutoSize = true;
+            this.lblEnvanterNo.Location = new System.Drawing.Point(6, 9);
+            this.lblEnvanterNo.Name = "lblEnvanterNo";
+            this.lblEnvanterNo.Size = new System.Drawing.Size(78, 15);
+            this.lblEnvanterNo.TabIndex = 1;
+            this.lblEnvanterNo.Text = "Envanter No :";
             // 
             // dgwInventoryList
             // 
@@ -239,6 +249,74 @@
             this.dgwCompanyList.Size = new System.Drawing.Size(570, 408);
             this.dgwCompanyList.TabIndex = 6;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.txtInventorySaleText);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.btnSale);
+            this.tabPage3.Controls.Add(this.txtQuantitySaleText);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.dgwSaleList);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(792, 422);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Satış Yap";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // txtInventorySaleText
+            // 
+            this.txtInventorySaleText.Location = new System.Drawing.Point(96, 7);
+            this.txtInventorySaleText.Name = "txtInventorySaleText";
+            this.txtInventorySaleText.Size = new System.Drawing.Size(100, 23);
+            this.txtInventorySaleText.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 15);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Envanter No :";
+            // 
+            // btnSale
+            // 
+            this.btnSale.Location = new System.Drawing.Point(121, 65);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Size = new System.Drawing.Size(75, 23);
+            this.btnSale.TabIndex = 13;
+            this.btnSale.Text = "Kaydet";
+            this.btnSale.UseVisualStyleBackColor = true;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
+            // 
+            // txtQuantitySaleText
+            // 
+            this.txtQuantitySaleText.Location = new System.Drawing.Point(96, 36);
+            this.txtQuantitySaleText.Name = "txtQuantitySaleText";
+            this.txtQuantitySaleText.Size = new System.Drawing.Size(100, 23);
+            this.txtQuantitySaleText.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Adet :";
+            // 
+            // dgwSaleList
+            // 
+            this.dgwSaleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwSaleList.Location = new System.Drawing.Point(215, 7);
+            this.dgwSaleList.Name = "dgwSaleList";
+            this.dgwSaleList.RowTemplate.Height = 25;
+            this.dgwSaleList.Size = new System.Drawing.Size(570, 408);
+            this.dgwSaleList.TabIndex = 10;
+            this.dgwSaleList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwSaleList_CellClick);
+            // 
             // InventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -256,6 +334,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCompanyList)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSaleList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,7 +347,7 @@
         private TabPage tabPage1;
         private Button btnInvantoryAdd;
         private TextBox txtInventoryName;
-        private Label lblEnvanterAdi;
+        private Label lblEnvanterNo;
         private DataGridView dgwInventoryList;
         private TabPage tabPage2;
         private TextBox txtQantity;
@@ -281,5 +362,12 @@
         private Label lblEntry;
         private Label lblCompany;
         private ComboBox cbCompany;
+        private TabPage tabPage3;
+        private TextBox txtInventorySaleText;
+        private Label label2;
+        private Button btnSale;
+        private TextBox txtQuantitySaleText;
+        private Label label1;
+        private DataGridView dgwSaleList;
     }
 }

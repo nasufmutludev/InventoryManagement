@@ -27,5 +27,24 @@ namespace Business.Concrete
         {
             _inventoryDal.Add(inventory);
         }
+
+        public void Sale(int id, int quantity, string inventoryNo, int companyId, DateTime DateOfEntry, DateTime ReleaseDate)
+        {
+            var inventoryFind = _inventoryDal.Get(x => x.Id == id);
+            if (inventoryFind != null)
+            {
+                var sale = inventoryFind.Quantity - quantity;
+                var result = new Inventory
+                {
+                    Id = id,
+                    InventoryName = inventoryNo,
+                    CompanyId = companyId,
+                    Quantity = sale,
+                    DateOfEntry = DateOfEntry,
+                    ReleaseDate = ReleaseDate
+                };
+                _inventoryDal.Update(result);
+            }
+        }
     }
 }

@@ -11,5 +11,6 @@ namespace Business.Abstract
     {
         List<Inventory> GetList();
         void Add(Inventory inventory);
+        void Sale(int id, int quantity, string inventoryNo, int companyId, DateTime DateOfEntry, DateTime ReleaseDate);
     }
 }
