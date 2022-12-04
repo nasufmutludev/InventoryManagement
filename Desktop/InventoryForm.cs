@@ -11,7 +11,7 @@ namespace Desktop
             InitializeComponent();
         }
 
-        InventoryManager _inventoryManager=new InventoryManager(new EfInventoryDal());
+        InventoryManager _inventoryManager = new InventoryManager(new EfInventoryDal());
         private CompanyManager _companyManager = new CompanyManager(new EfCompanyDal());
 
         private void InventoryForm_Load(object sender, EventArgs e)
@@ -19,6 +19,12 @@ namespace Desktop
             LoadInventory();
             CompanyLoad();
             CmbCompanyLoad();
+            Random rastgele = new Random();
+            int sayi = rastgele.Next(1, 100000);
+            var tarih = DateTime.Now.Date.Day.ToString();
+            var tarih2 = DateTime.Now.Year.ToString();
+            var tarih3 = DateTime.Now.Second.ToString();
+            txtInventoryName.Text = "000000" + tarih + tarih2 + tarih3 + sayi;
         }
 
         private void CmbCompanyLoad()
@@ -46,7 +52,7 @@ namespace Desktop
                 CompanyId = Convert.ToInt32(cbCompany.SelectedValue),
                 DateOfEntry = dtEntry.Value.Date,
                 ReleaseDate = dtRelease.Value.Date,
-                Quantity=Convert.ToInt32(txtQantity.Text)
+                Quantity = Convert.ToInt32(txtQantity.Text)
             };
             _inventoryManager.Add(inventoryAdd);
             LoadInventory();
