@@ -88,8 +88,8 @@ namespace Desktop
             string inventoryNo = dgwSaleList.CurrentRow.Cells[1].Value.ToString();
             int quantity = Convert.ToInt32(txtQuantitySaleText.Text);
             int companyId = Convert.ToInt32(dgwSaleList.CurrentRow.Cells[3].Value.ToString());
-            DateTime tarih = Convert.ToDateTime(dgwSaleList.CurrentRow.Cells[4].Value.ToString());
-            DateTime tarih2 = Convert.ToDateTime(dgwSaleList.CurrentRow.Cells[5].Value.ToString());
+            DateTime date = Convert.ToDateTime(dgwSaleList.CurrentRow.Cells[4].Value.ToString());
+            DateTime date2 = Convert.ToDateTime(dgwSaleList.CurrentRow.Cells[5].Value.ToString());
             int quantityCheck = Convert.ToInt32(dgwSaleList.CurrentRow.Cells[2].Value.ToString());
             if (quantityCheck == 0)
             {
@@ -97,7 +97,7 @@ namespace Desktop
             }
             else
             {
-                _inventoryManager.Sale(inventoryId, quantity, inventoryNo, companyId, tarih, tarih2);
+                _inventoryManager.Sale(inventoryId, quantity, inventoryNo, companyId, date, date2);
                 SaleLoad();
             }
         }
