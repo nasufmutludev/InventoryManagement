@@ -10,9 +10,10 @@ namespace Entities
     public class User:IEntity
     {
         public int Id { get; set; }
+        public string UserName { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int DepartmentName { get; set; }
+        public int DepartmentId { get; set; }
         public bool Status { get; set; }
     }
 }

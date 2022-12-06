@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.DataAccess;
 using Entities;
 
-namespace Business.Abstract
+namespace DataAccess.Abstract
 {
-    public interface ICompanyService
+    public interface IUserDal:IEntityRepository<User>
     {
-        List<Company> GetList();
-        void Add(string companyName);
     }
 }

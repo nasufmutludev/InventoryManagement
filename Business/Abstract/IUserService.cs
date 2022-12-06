@@ -7,9 +7,9 @@ using Entities;
 
 namespace Business.Abstract
 {
-    public interface ICompanyService
+    public interface IUserService
     {
-        List<Company> GetList();
-        void Add(string companyName);
+        List<User> GetList();
+        void Add(string username,string name,string surname,int departmentId);
     }
 }

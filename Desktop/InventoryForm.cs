@@ -1,4 +1,5 @@
 using Business.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Concrete;
 using Entities;
 using Microsoft.VisualBasic;
@@ -12,8 +13,9 @@ namespace Desktop
             InitializeComponent();
         }
 
-        InventoryManager _inventoryManager = new InventoryManager(new EfInventoryDal());
+        private InventoryManager _inventoryManager = new InventoryManager(new EfInventoryDal());
         private CompanyManager _companyManager = new CompanyManager(new EfCompanyDal());
+        private UserManager _userManager = new UserManager(new EfUserDal());
 
         private void InventoryForm_Load(object sender, EventArgs e)
         {
@@ -21,12 +23,18 @@ namespace Desktop
             CompanyLoad();
             CmbCompanyLoad();
             SaleLoad();
+            UserLoad();
             Random rastgele = new Random();
             int sayi = rastgele.Next(1, 100000);
             var tarih = DateTime.Now.Date.Day.ToString();
             var tarih2 = DateTime.Now.Year.ToString();
             var tarih3 = DateTime.Now.Second.ToString();
             txtInventoryName.Text = "0000" + tarih + tarih2 + tarih3 + sayi;
+        }
+
+        private void UserLoad()
+        {
+            dgwUserList.DataSource = _userManager.GetList();
         }
 
         private void SaleLoad()
@@ -53,26 +61,19 @@ namespace Desktop
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            var inventoryAdd = new Inventory()
-            {
-                InventoryName = txtInventoryName.Text.Trim(),
-                CompanyId = Convert.ToInt32(cbCompany.SelectedValue),
-                DateOfEntry = dtEntry.Value.Date,
-                ReleaseDate = dtRelease.Value.Date,
-                Quantity = Convert.ToInt32(txtQantity.Text)
-            };
-            _inventoryManager.Add(inventoryAdd);
+            string inventoryName = txtInventoryName.Text;
+            int companyId = Convert.ToInt32(cbCompany.SelectedValue);
+            int quantity = Convert.ToInt32(txtQantity.Text);
+            DateTime dateOfEntry = Convert.ToDateTime(dtEntry.Value.ToShortDateString());
+            DateTime release=Convert.ToDateTime(dtRelease.Value.ToShortDateString());
+            _inventoryManager.Add(inventoryName, companyId,dateOfEntry,release,quantity);
             LoadInventory();
         }
 
         private void btnCompanyAdd_Click(object sender, EventArgs e)
         {
-            var companyAdd = new Company()
-            {
-                CompanyName = txtCompanyName.Text,
-                Status = true
-            };
-            _companyManager.Add(companyAdd);
+            string companyName = txtCompanyName.Text;
+            _companyManager.Add(companyName);
             CompanyLoad();
         }
 
@@ -99,6 +100,16 @@ namespace Desktop
                 _inventoryManager.Sale(inventoryId, quantity, inventoryNo, companyId, tarih, tarih2);
                 SaleLoad();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string name= txtName.Text;
+            string surname= txtSurname.Text;
+            int departmentId = Convert.ToInt32(cmbDepartment.SelectedValue);
+            _userManager.Add(username,name,surname,departmentId);
+            UserLoad();
         }
     }
 }

@@ -23,9 +23,14 @@ namespace Business.Concrete
             return _companyDal.GetAll();
         }
 
-        public void Add(Company company)
+        public void Add(string companyName)
         {
-            _companyDal.Add(company);
+            var companyNameAdd = new Company()
+            {
+                CompanyName = companyName,
+                Status = true
+            };
+            _companyDal.Add(companyNameAdd);
         }
     }
 }

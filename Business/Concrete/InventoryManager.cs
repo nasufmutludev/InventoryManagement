@@ -23,9 +23,17 @@ namespace Business.Concrete
             return _inventoryDal.GetAll();
         }
 
-        public void Add(Inventory inventory)
+        public void Add(string inventoryName, int companyId, DateTime dateOfEntry, DateTime releaseDate, int quantity)
         {
-            _inventoryDal.Add(inventory);
+            var inventoryAdd = new Inventory()
+            {
+                InventoryName = inventoryName,
+                CompanyId = companyId,
+                DateOfEntry = dateOfEntry,
+                ReleaseDate = releaseDate,
+                Quantity = quantity
+            };
+            _inventoryDal.Add(inventoryAdd);
         }
 
         public void Sale(int id, int quantity, string inventoryNo, int companyId, DateTime DateOfEntry, DateTime ReleaseDate)
