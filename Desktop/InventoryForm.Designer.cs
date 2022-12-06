@@ -61,7 +61,7 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.userAdd = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.dgwUserList = new System.Windows.Forms.DataGridView();
@@ -339,7 +339,7 @@
             this.tabPage5.Controls.Add(this.lblSurname);
             this.tabPage5.Controls.Add(this.txtUsername);
             this.tabPage5.Controls.Add(this.lblUserName);
-            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.userAdd);
             this.tabPage5.Controls.Add(this.txtName);
             this.tabPage5.Controls.Add(this.lblName);
             this.tabPage5.Controls.Add(this.dgwUserList);
@@ -400,15 +400,15 @@
             this.lblUserName.TabIndex = 20;
             this.lblUserName.Text = "Kullanıcı Adı :";
             // 
-            // button1
+            // userAdd
             // 
-            this.button1.Location = new System.Drawing.Point(120, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.userAdd.Location = new System.Drawing.Point(120, 123);
+            this.userAdd.Name = "userAdd";
+            this.userAdd.Size = new System.Drawing.Size(75, 23);
+            this.userAdd.TabIndex = 19;
+            this.userAdd.Text = "Kaydet";
+            this.userAdd.UseVisualStyleBackColor = true;
+            this.userAdd.Click += new System.EventHandler(this.userAdd_Click);
             // 
             // txtName
             // 
@@ -493,7 +493,7 @@
         private TabPage tabPage5;
         private TextBox txtUsername;
         private Label lblUserName;
-        private Button button1;
+        private Button userAdd;
         private TextBox txtName;
         private Label lblName;
         private DataGridView dgwUserList;
