@@ -65,8 +65,8 @@ namespace Desktop
             int companyId = Convert.ToInt32(cbCompany.SelectedValue);
             int quantity = Convert.ToInt32(txtQantity.Text);
             DateTime dateOfEntry = Convert.ToDateTime(dtEntry.Value.ToShortDateString());
-            DateTime release=Convert.ToDateTime(dtRelease.Value.ToShortDateString());
-            _inventoryManager.Add(inventoryName, companyId,dateOfEntry,release,quantity);
+            DateTime release = Convert.ToDateTime(dtRelease.Value.ToShortDateString());
+            _inventoryManager.Add(inventoryName, companyId, dateOfEntry, release, quantity);
             LoadInventory();
         }
 
@@ -90,10 +90,10 @@ namespace Desktop
             int companyId = Convert.ToInt32(dgwSaleList.CurrentRow.Cells[3].Value.ToString());
             DateTime tarih = Convert.ToDateTime(dgwSaleList.CurrentRow.Cells[4].Value.ToString());
             DateTime tarih2 = Convert.ToDateTime(dgwSaleList.CurrentRow.Cells[5].Value.ToString());
-            int adetKontrol = Convert.ToInt32(dgwSaleList.CurrentRow.Cells[2].Value.ToString());
-            if (adetKontrol == 0)
+            int quantityCheck = Convert.ToInt32(dgwSaleList.CurrentRow.Cells[2].Value.ToString());
+            if (quantityCheck == 0)
             {
-                MessageBox.Show("Satýþ yapýlacak adet bulunamadý");
+                MessageBox.Show("Quantity= " + quantityCheck);
             }
             else
             {
@@ -105,10 +105,10 @@ namespace Desktop
         private void button1_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
-            string name= txtName.Text;
-            string surname= txtSurname.Text;
+            string name = txtName.Text;
+            string surname = txtSurname.Text;
             int departmentId = Convert.ToInt32(cmbDepartment.SelectedValue);
-            _userManager.Add(username,name,surname,departmentId);
+            _userManager.Add(username, name, surname, departmentId);
             UserLoad();
         }
     }
